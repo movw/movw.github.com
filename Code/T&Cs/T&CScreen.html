@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<head>
+    <style src="Center.css"></style>
+</head>
+
+<body>
+	<p>You MUST accept the Terms and Conditions below</p>
+	<p>This website is freeware.
+
+			You may NOT copy this website and publish it on your own server.
+			You may NOT modify this webpage
+			You may NOT claim this webpage as your own
+        </p>
+        
+        <button id="save">I accept</button>
+        <button id="end">I DO NOT ACCEPT</button>
+        
+            <script>
+            var localAccept;
+            localAccept = localStorage['accept'] || "";
+            if (localAccept = "YES") {
+                window.location="//Code/InfoGrabber/InfoGrabber.html";
+            }
+            else {
+document.getElementById('save').onclick = function () {
+    localStorage['accept'] = "YES";
+    localAccept = localStorage['accept'] || "";
+    window.location="//InfoGrabber/InfoGrabber.html";
+};
+            }
+</script>
+</body>
